@@ -1,0 +1,109 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    font-family: 'poppins',sans-serif;
+    background: linear-gradient(135deg,#0f0f1a,#101e3d);
+    color: #00f0ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container{
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0,240,255,0.3);
+    width: 100%;
+    max-width: 600px;
+    animation: animate 0.8s ease;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+h1{
+    font-size: 1.8rem;
+    color: #00f0ff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00f0ff;
+}
+#question{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 8px #00f0ff;
+}
+.option{
+    background-color: rgba(0,0,0,0.3);
+    color: #00f0ff;
+    border: 2px solid #00f0ff;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0,240,255,0.4);
+}
+.option:hover{
+    transform: scale(1.05);
+    background: rgba(0,240,255,0.1);
+}
+.correct{
+    border: #00ff73;
+    color: #00ff73;
+    box-shadow: 0 0 15px #00ff73;
+    background-color: rgba(0,255,115,0.1);
+}
+.incorrect{
+    border-color: #ff0059;
+    color: #ff0059;
+    box-shadow: 0 0 15px #ff0059;
+    background-color: rgba(255,0,89,0.1);
+}
+#score{
+    margin-top: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px #00f0ff;
+}
+#loading{
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+    margin-bottom: 15px;
+}
+.dots span{
+    animation: blink 1.4s infinite both;
+    font-weight: bold;
+}
+.dots span:nth-child(2){
+    animation-delay: 0.2s;
+}
+.dots span:nth-child(3){
+animation-delay: 0.4s;
+}
+@keyframes blink{
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
